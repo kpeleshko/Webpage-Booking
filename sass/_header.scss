@@ -1,0 +1,37 @@
+.header {
+    grid-column: full-start / full-end;
+   
+    margin: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__burger-menu {
+        height: .4rem;
+        width: 2.8rem;
+        background-color: $color-grey-dark-2;
+        cursor: pointer;
+        border-radius: 20%;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            @extend .header__burger-menu;
+            transition: all 0.2s ease-out;
+        }
+
+        &::before { transform: translateY(1rem);}
+        &::after {transform: translateY(-1.4rem);}
+
+        &:hover::before { transform: translateY(1.1rem);}
+        &:hover::after {transform: translateY(-1.5rem);}
+    }
+
+    &__search-icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-grey-dark-1;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,73 @@
+.our-room {
+    padding: 12rem 0;
+    grid-column: center-start / center-end;
+    justify-items: center;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-rows: max-content repeat(2, 22rem);
+    grid-auto-rows: minmax(22rem, auto);
+    grid-gap: 3rem;
+
+    &__heading {
+        grid-column: 1 / -1;
+    }
+
+    &__link {
+        display: block;
+    }
+}
+
+.room {
+    padding-bottom: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    align-content: end;
+    justify-items: center;
+    background-position: center;
+    background-size: cover;
+    &-1 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room1-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room1.jpg);}
+    }
+    &-2 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room2-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room2.jpg);}
+    }
+    &-3 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room3-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room3.jpg);}
+    }
+    &-4 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room4-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room4.jpg);}
+    }
+    &-5 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room5-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room5.jpg);}
+    }
+    &-6 {
+        background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room6-low.jpg);
+        @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+            background-image: linear-gradient(to bottom, rgba($color-grey-dark-2, .2), rgba($color-grey-dark-2, .6) 90%), url(../img/room6.jpg);}
+    }
+
+    &__btn {
+        @extend %btn;
+        background-color: $color-primary;
+        color: $color-grey-light-1;
+        text-transform: uppercase;
+    }
+
+    &__price {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $color-grey-light-1;
+    }
+}

@@ -1,0 +1,72 @@
+.hero-area {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(to right, rgba($color-secondary, .4) 20%, rgba($color-primary, .5) 50%), 
+                      url(../img/header-low.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-columns: minmax(min-content, 7rem) 1fr;
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+        background-image: linear-gradient(to right, rgba($color-secondary, .4) 20%, rgba($color-primary, .5) 50%), 
+                          url(../img/header.jpg);}
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 80vh 4rem;
+    }
+
+    &__sidebar {
+        display: grid;
+        align-content: center;
+        background-color: #fff;
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+    }
+
+    &__content {
+        grid-column: 2/3;
+        display: grid;
+        grid-template-rows: repeat(3, max-content);
+        grid-row-gap: 3rem;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__heading {
+        width: 40vw;
+        text-align: center;
+    }
+
+    &__btn {
+        @extend %btn;
+        padding: 2rem 3rem;
+        background-color: $color-grey-light-1;
+        color: $color-grey-dark-2;
+        border-radius: 5rem;
+        text-transform: uppercase;
+        &:hover {
+            background-image: linear-gradient(to right, rgba($color-secondary, .7), rgba($color-primary, .8));
+            color: $color-grey-light-1;
+        }
+    }
+}
+
+#hero-area__social {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: .5rem;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(5, max-content);
+    }
+}

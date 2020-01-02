@@ -1,0 +1,43 @@
+.testomonials {
+    padding: 7rem 0;
+    grid-column: center-start / center-end;
+    justify-items: center;
+
+    display: grid;
+    grid-template-columns: minmax(35rem, 45vw);
+    grid-template-rows: repeat(auto-fit, max-content);
+    grid-gap: 3rem;
+    justify-content: center;
+
+    &__text {
+        padding: 3rem;
+        line-height: 2rem;
+        background-color: $color-grey-light-1;
+        box-shadow: 0 0 10rem 1rem $color-secondary-light;    
+    }
+
+    &__autor-wrapper {
+       
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        grid-column-gap: 2rem;
+        align-items: center;
+    
+    }
+
+    &__autor-img {
+        border-radius: 50%;
+        height: 7rem;
+        width: 7rem;
+    }
+
+    &__autor-info {
+        display: inline-block;
+        color: $color-grey-dark-1;
+        font-size: 1.2rem;
+    }
+
+    &__autor-name {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,30 @@
+.services {
+    padding: 7rem 0;
+    grid-column: center-start / center-end;
+    justify-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-rows: repeat(auto-fit, max-content);
+    grid-gap: 3rem;
+
+    &__heading { grid-column: 1 / -1; margin-bottom: 2rem;}
+}
+
+.service {
+    &__item {
+        text-align: center;
+    }
+
+    &__icon {
+        margin-bottom: 1rem;
+        height: 5rem;
+        width: 5rem;
+        fill: $color-primary;
+    }
+
+    &__text {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+}

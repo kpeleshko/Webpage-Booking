@@ -1,0 +1,49 @@
+.footer {
+    padding: 5rem 10vw;
+    grid-column: full-start / full-end;
+    background-color: $color-grey-dark-2;
+    color: $color-grey-light-1;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    // grid-template-rows: repeat(auto-fit, max-content);
+    grid-gap: 3rem;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+        grid-gap: 3rem;
+        justify-items: start;
+    }
+
+    &__info-place,
+    &__info-phone {
+        display: flex;
+    }
+
+    &__info-icon {
+        margin-right: 1rem;
+        height: 3rem;
+        width: 3rem;
+        fill: $color-grey-light-2;
+    }
+
+    &__info-text { color: $color-grey-light-1;}
+
+    &__list-item {}
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(5, max-content);
+    grid-gap: .5rem;
+    justify-content: center;
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-grey-light-2;
+        cursor: pointer;
+    }
+}
