@@ -15,8 +15,10 @@
         background-color: $color-grey-light-1;
         box-shadow: 0 0 10rem 1rem $color-secondary-light;    
     }
+}
 
-    &__autor-wrapper {
+.autor {
+    &__wrapper {
        
         display: grid;
         grid-template-columns: repeat(2, max-content);
@@ -25,19 +27,19 @@
     
     }
 
-    &__autor-img {
+    &__img {
         border-radius: 50%;
         height: 7rem;
         width: 7rem;
     }
 
-    &__autor-info {
+    &__info {
         display: inline-block;
         color: $color-grey-dark-1;
         font-size: 1.2rem;
     }
 
-    &__autor-name {
+    &__name {
         font-size: 2rem;
     }
 }

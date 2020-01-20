@@ -6,12 +6,20 @@
     justify-content: space-between;
     align-items: center;
 
+    &__search-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: $color-grey-dark-1;
+        cursor: pointer;
+    }
+
     &__burger-menu {
         height: .4rem;
         width: 2.8rem;
-        background-color: $color-grey-dark-2;
+        background-color: $color-grey-dark-1;
         cursor: pointer;
         border-radius: 20%;
+        border: none;
 
         &::before,
         &::after {
@@ -26,12 +34,5 @@
 
         &:hover::before { transform: translateY(1.1rem);}
         &:hover::after {transform: translateY(-1.5rem);}
-    }
-
-    &__search-icon {
-        height: 2rem;
-        width: 2rem;
-        fill: $color-grey-dark-1;
-        cursor: pointer;
     }
 }

@@ -158,12 +158,18 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .header__search-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: #686868;
+    cursor: pointer; }
   .header__burger-menu, .header__burger-menu::before, .header__burger-menu::after {
     height: .4rem;
     width: 2.8rem;
-    background-color: #444;
+    background-color: #686868;
     cursor: pointer;
-    border-radius: 20%; }
+    border-radius: 20%;
+    border: none; }
     .header__burger-menu::before, .header__burger-menu::after {
       content: "";
       display: block;
@@ -176,11 +182,6 @@ p {
       transform: translateY(1.1rem); }
     .header__burger-menu:hover::after {
       transform: translateY(-1.5rem); }
-  .header__search {
-    height: 2rem;
-    width: 2rem;
-    fill: #686868;
-    cursor: pointer; }
 
 .hero-area {
   grid-column: full-start / full-end;
@@ -275,44 +276,16 @@ p {
     display: block; }
 
 .room {
-  padding-bottom: 1.5rem;
-  width: 100%;
-  display: grid;
-  grid-gap: 1rem;
-  align-content: end;
-  justify-items: center;
-  background-position: center;
-  background-size: cover; }
-  .room-1 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room1-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-1 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room1.jpg); } }
-  .room-2 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room2-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-2 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room2.jpg); } }
-  .room-3 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room3-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-3 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room3.jpg); } }
-  .room-4 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room4-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-4 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room4.jpg); } }
-  .room-5 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room5-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-5 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room5.jpg); } }
-  .room-6 {
-    background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room6-low.jpg); }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-      .room-6 {
-        background-image: linear-gradient(to bottom, rgba(68, 68, 68, 0.2), rgba(68, 68, 68, 0.6) 90%), url(../img/room6.jpg); } }
+  position: relative; }
+  .room__img {
+    height: 100%;
+    width: 100%; }
+  .room__info {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; }
   .room__btn {
     background-color: #c19b76;
     color: #fff;
@@ -361,21 +334,25 @@ p {
     line-height: 2rem;
     background-color: #fff;
     box-shadow: 0 0 10rem 1rem #eff4f8; }
-  .testomonials__autor-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    grid-column-gap: 2rem;
-    align-items: center; }
-  .testomonials__autor-img {
-    border-radius: 50%;
-    height: 7rem;
-    width: 7rem; }
-  .testomonials__autor-info {
-    display: inline-block;
-    color: #686868;
-    font-size: 1.2rem; }
-  .testomonials__autor-name {
-    font-size: 2rem; }
+
+.autor__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 2rem;
+  align-items: center; }
+
+.autor__img {
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem; }
+
+.autor__info {
+  display: inline-block;
+  color: #686868;
+  font-size: 1.2rem; }
+
+.autor__name {
+  font-size: 2rem; }
 
 .video {
   grid-column: full-start / full-end;
